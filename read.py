@@ -1,8 +1,8 @@
 #1. 每100000筆，印出狀態
 #2. 印出 共有幾筆資料?
 #3. 印出 留言平均長度?
-#4. 印出 留言長度<100，共有幾筆?
-#5. 印出 隨機一筆留言長度<100的留言
+#4. 印出 留言長度<100，共有幾筆? 並隨機印出一筆留言 
+#5. 印出 共有幾筆留言中提到good? 並隨機印出一筆留言
 
 data =[]
 count = 0
@@ -27,7 +27,13 @@ for x in data:
 		under100.append(x)
 print('留言長度小於100的，共有', len(under100), '筆')
 print(under100[0])
-print(under100[1])
+
+listA = []
+for d in data:
+	if 'good' in d:
+		listA.append(d)
+print('一共有', len(listA), '筆留言提到good')
+print(listA[0])
 
 
 """
